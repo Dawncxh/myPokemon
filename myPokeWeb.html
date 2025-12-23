@@ -14,7 +14,6 @@
         .title {
             width: 100%;
             overflow: hidden;
-
             color: white;
         }
 
@@ -52,7 +51,7 @@
             background-color: red;
             color: white;
             font-size: 25px;
-            font-family: 'papyrus';
+            font-family: sans-serif;
             padding: 5px;
             border: 5px solid white;
             border-radius: 10px;
@@ -66,6 +65,7 @@
 
         .mySlides {
             margin: 2%;
+
         }
 
         .mySlides img {
@@ -74,10 +74,15 @@
             margin-right: auto;
             border: 5px outset black;
         }
+        
+        .slideImg {
+            margin-bottom: 30px;
+        }
 
         .slideshow-container {
             position: relative;
             margin: auto;
+            height: 40dvw;
         }
 
         .prev, .next {
@@ -89,14 +94,18 @@
             margin-top: -22px;
             color: white;
             font-weight: 18px;
-            font-size: 18px;
+            font-size: 30px;
             transition: 0.6sec ease;
             border-radius: 0 3px 3px 0;
             user-select: none;
         }
 
+        .prev {
+            left: 10%;
+        }
+
         .next {
-            right: 0;
+            right: 10%;
             border-radius: 3px 0 0 3px;
         }
 
@@ -108,22 +117,13 @@
         .text {
             width: 100%;
             color: #f2f2f2;
-            font-size: 2.5vw;
+            background: black;
+            font-size: 2vw;
             text-shadow: 1px 1px black;
             padding: 8px 12px;
             position: absolute;
-            bottom: 8px;
+            bottom: 5px;
             text-align: center;
-        }
-
-        /* Number text (1/3 etc) */
-        .numbertext {
-            color: #f2f2f2;
-            font-size: 20px;
-            text-shadow: 2px 1px black;
-            padding: 8px 12px;
-            position: absolute;
-            top: 0;
         }
 
         /* The dots/bullets/indicators */
@@ -157,6 +157,23 @@
         @media only screen and (max-width: 300px) {
             .prev, .next,.text {font-size: 11px}
         }
+
+        #pokemonFarm {
+            text-align: center;
+        }
+
+        button {
+            background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/f2bdfea4-daa1-4431-be3e-c5ae6801fa3b/deiyerh-0400b131-94e1-4668-b78a-13c897ae7ac0.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi9mMmJkZmVhNC1kYWExLTQ0MzEtYmUzZS1jNWFlNjgwMWZhM2IvZGVpeWVyaC0wNDAwYjEzMS05NGUxLTQ2NjgtYjc4YS0xM2M4OTdhZTdhYzAucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.GFO50xVsLitXiWWGPbqAMiRDgZJBcihJZB1_7O4Vrqs');
+            background-position: center;
+            color: black;
+            padding: 5px;
+            margin: 10px;
+            width: 300px;
+            font-size: 4vw;
+            font-weight: bold;
+            text-shadow: 1px 1px white;
+            cursor: pointer;
+        } 
 
         .ending {
             position: relative;
@@ -220,33 +237,28 @@
     
     <div class="slideshow-container">
         <div class="mySlides fade">
-            <div class="numbertext">1 / 5</div>
-            <img class="slideImg" src="https://static.zerochan.net/Pok%C3%A9mon.full.3289490.jpg" style="width:100%">
-            <div class="text">Plusle - cheerful Electric-type Pokémon <br> known for supporting its partners in battle</div>
+            <img class="slideImg" src="https://static.zerochan.net/Pok%C3%A9mon.full.3289490.jpg" style="width:40dvw">
+            <div class="text"><strong>Plusle</strong><br>cheerful <span style="color: yellow;"><strong>Electric-type</strong></span> Pokémon <br> known for supporting its partners in battle</div>
         </div>
 
         <div class="mySlides fade">
-            <div class="numbertext">2 / 5</div>
-            <img class="slideImg" src="https://static.zerochan.net/Wooloo.1024.3674209.webp" style="width:100%">
-            <div class="text">Wooloo - timid Normal-type sheep Pokémon covered in fluffy white wool. <br> It hates conflict and will roll away to escape danger rather than fight.</div>
+            <img class="slideImg" src="https://static.zerochan.net/Wooloo.1024.3674209.webp" style="width:45dvw">
+            <div class="text"><strong>Wooloo</strong><br>timid <span style="color: grey;"><strong>Normal-type</strong></span> sheep Pokémon covered in fluffy white wool. <br> It hates conflict and will roll away to escape danger rather than fight.</div>
         </div>
 
         <div class="mySlides fade">
-            <div class="numbertext">3 / 5</div>
-            <img class="slideImg" src="https://static.zerochan.net/Sprigatito.1024.4016937.webp" style="width:100%">
-            <div class="text">Sprigatito - playful Grass-type cat Pokémon. <br> The fragrance it releases from its fluffy fur can relax those around it,<br>and it often rubs against people or Pokémon to spread the calming aroma.</div>
+            <img class="slideImg" src="https://static.zerochan.net/Sprigatito.1024.4016937.webp" style="width:45dvw">
+            <div class="text"><strong>Sprigatito</strong><br>playful <span style="color: limegreen;"><strong>Grass-type</strong></span> cat Pokémon. <br> The fragrance it releases from its fluffy fur can relax those around it,<br>and it often rubs against people or Pokémon to spread the calming aroma.</div>
         </div>
 
         <div class="mySlides fade">
-            <div class="numbertext">3 / 5</div>
-            <img class="slideImg" src="https://static0.colliderimages.com/wordpress/wp-content/uploads/2022/01/bidoof-big-stand-pokemon-short-social.jpg" style="width:100%">
-            <div class="text">Bidoof - carefree Normal-type beaver Pokémon. <br> Because of its cute looks and silly nature, Bidoof became a fan-favorite meme<br>in the Pokémon community.</div>
+            <img class="slideImg" src="https://static0.colliderimages.com/wordpress/wp-content/uploads/2022/01/bidoof-big-stand-pokemon-short-social.jpg" style="width:45dvw">
+            <div class="text"><strong>Bidoof</strong><br>carefree <span style="color: grey;"><strong>Normal-type</strong></span> beaver Pokémon. <br> Because of its cute looks and silly nature, Bidoof became a fan-favorite meme<br>in the Pokémon community.</div>
         </div>
 
         <div class="mySlides fade">
-            <div class="numbertext">3 / 5</div>
-            <img class="slideImg" src="https://i.ytimg.com/vi/DDqoe6_WnOY/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBNwY-g7u0w4wPuOYO5P5PBt_ov3A" style="width:100%">
-            <div class="text">Hisuian Zorua - Ghost-type foxy Pokémon. <br> They use illusions created from ghostly energy to scare enemies,<br>but also mimic humans or Pokémon as a way to bond with those they trust.</div>
+            <img class="slideImg" src="https://i.ytimg.com/vi/DDqoe6_WnOY/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBNwY-g7u0w4wPuOYO5P5PBt_ov3A" style="width:45dvw">
+            <div class="text"><strong>Hisuian Zorua</strong><br><span style="color: plum;"><strong>Ghost-type</strong></span> foxy Pokémon. <br> They use illusions created from ghostly energy to scare enemies,<br>but also mimic humans or Pokémon as a way to bond with those they trust.</div>
         </div>
 
         <a class="prev" onclick="plusSlides(-1)">❮</a>
@@ -264,20 +276,37 @@
         <span class="dot" onclick="currentSlide(5)"></span>
     </div>
 
+    <br>
+    <br>
+<!--
+    <h1 class="favPoke" style="width: 500px;">Check PokéFarm for more Pokémon
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9bL705dVou5LjvDZcFGzEHeCQ_WFv7b9nQA&s" alt="pokeball">
+    </h1>
+
+    <div id="pokemonFarm">
+        <button onclick="goToPokeFarm()" id="pokeButton">PokéFarm</button>
+    </div>
+
+    <br>
+    <br> -->
+
     <div class="ending">
         <img src="https://wallpapers.com/images/hd/caption-an-epic-pokemon-adventure-awaits-f02w1ifte8foxzjr.jpg" alt="start your pokemon journey" style="width:100%">
-        <h1 class="endText">Thanks for checking on my fan page!</h1>
+        <h1 class="endText">Thanks for visiting my fan page!</h1>
     </div>
     
     <script>
         let slideIndex = 1;
+        let t;
         showSlides(slideIndex);
 
         function plusSlides(n) {
+            clearTimeout(t);
             showSlides(slideIndex += n);
         }
 
         function currentSlide(n) {
+            clearTimeout(t);
             showSlides(slideIndex = n);
         }
 
@@ -285,8 +314,9 @@
             let i;
             let slides = document.getElementsByClassName("mySlides");
             let dots = document.getElementsByClassName("dot");
+            if (n == undefined) {n = ++slideIndex}
             if (n > slides.length) {slideIndex = 1}    
-            if (n < 1) {slideIndex = slides.length}
+            if (slideIndex < 1) {slideIndex = slides.length}
             for (i = 0; i < slides.length; i++) {
                 slides[i].style.display = "none";  
             }
@@ -295,6 +325,11 @@
             }
             slides[slideIndex-1].style.display = "block";  
             dots[slideIndex-1].className += " active";
+            t = setTimeout(showSlides, 5000);
+        }
+
+        function goToPokeFarm() {
+            window.location.href = "pokeFarm.html";
         }
     </script>
 </body>
