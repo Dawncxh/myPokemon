@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>All about my Pokémon Journey!</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <style>
+
+        body {
+            background-color: rgb(154, 187, 247);
+            font-family: sans-serif;
+        }
+        
+        .title {
+            width: 100%;
+            overflow: hidden;
+            color: white;
+        }
+
+        .title img {
+            position: fixed;
+            width: 100%;
+            margin: -45% 0 0 0;
+            z-index: -2;
+        }
+
+        h1 {
+            text-align: center;
+            text-shadow: 2px 2px grey;
+            font-size: 6vw;
+            margin-top: 5%;
+            margin-bottom: 3%;
+        }
+
+        h2 {
+            text-align: center;
+            text-shadow: 2px 2px grey;
+            background-color: black;
+            font-size: 2vw;
+            margin-bottom: 3%;
+        }
+
+        button {
+            font-size: 15px;
+            font-family: sans-serif;
+            cursor: pointer;
+            padding: 2px;
+        }
+
+        #homeimg {
+            width: 15px;
+        }
+
+        .map1 {
+            position: relative;
+            text-align: center;
+            overflow: hidden;
+            display: inline-block;
+            width: 100%;
+            height: 61dvw;
+        }
+
+        #grassField {
+            width: 80dvw;
+            border: 5px outset black;
+            position: block;
+            z-index: -1;
+        }
+
+        .poke {
+            width: 8dvw;
+            cursor: pointer;
+            filter: brightness(50%);
+            transition: filter 0.5s ease, transform 0.5s ease;
+        }
+
+        #charmander {
+            position: absolute;
+            width: 4.5dvw;
+            top: 3dvw;
+            right: 32dvw;
+            z-index: 1;
+        }
+
+        #bulbasaur {
+            position: absolute;
+            width: 4.5dvw;
+            top: 8dvw;
+            right: 39dvw;
+            z-index: 1;
+        }
+
+        #squirtle {
+            position: absolute;
+            width: 4.5dvw;
+            top: 31dvw;
+            right: 22dvw;
+            z-index: 1;
+        }
+
+        #jigglypuff {
+            position: absolute;
+            width: 6dvw;
+            top: 20dvw;
+            right: 25dvw;
+            z-index: 1;
+        }
+
+        #snorlax {
+            position: absolute;
+            width: 9.5dvw;
+            top: 7.2dvw;
+            right: 22dvw;
+            z-index: 1;
+        }
+
+        .ditto-crop {
+            width: 5dvw;
+            height: 5dvw;
+            top: 22dvw;
+            right: 40dvw;
+            position: absolute;
+            overflow: hidden;
+            z-index: 0;
+        }
+
+        #ditto {
+            position: absolute;
+            width: 8dvw;
+            top: -0.5dvw;
+            right: -1dvw;
+            z-index: 2;
+        }
+
+        #mew {
+            position: absolute;
+            width: 5dvw;
+            bottom: 9dvw;
+            left: 18dvw;
+            z-index: 1;
+        }
+
+        #psyduck {
+            position: absolute;
+            width: 12dvw;
+            bottom: 21dvw;
+            left: 46.5dvw;
+            z-index: 1;
+        }
+
+        #magikarp {
+            position: absolute;
+            width: 6dvw;
+            bottom: 38dvw;
+            left: 22dvw;
+            z-index: 1;
+        }
+
+        #eevee {
+            position: absolute;
+            width: 6dvw;
+            bottom: 8dvw;
+            right: 32dvw;
+            z-index: 1;
+        }
+
+        .poke:hover {
+            filter: brightness(100%);
+            transform: scale(1.03);
+        }
+        
+        /* On smaller screens, decrease text size */
+        @media only screen and (max-width: 1000px) {
+            #grassField {width: 100%}
+            .map1 {height: 75dvw}
+            #charmander {width: 6dvw; top: 4dvw; right: 27dvw}
+            #bulbasaur {width: 6dvw; top: 10dvw; right: 35dvw}
+            #squirtle{width: 6dvw; top: 38dvw; right: 15dvw}
+            #jigglypuff{width: 7dvw; top: 25dvw; right: 19dvw}
+            #snorlax {width: 11dvw; top: 9.5dvw; right: 16dvw}
+            .ditto-crop {width: 6dvw; height: 6dvw; top: 28dvw; right: 38dvw}
+            #ditto {width: 9dvw}
+            #mew {width: 6.5dvw; bottom: 10dvw; left: 12dvw}
+            #psyduck {width: 15dvw; bottom: 23dvw}
+            #magikarp {width: 8dvw; bottom: 45dvw; left: 16dvw}
+            #eevee {width: 8dvw; bottom: 10dvw; right: 28dvw}
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="homebutton-loc">
+        <button onclick=goToHome()>Back to Home
+            <span><img id="homeimg" src="https://cdn-icons-png.flaticon.com/512/25/25694.png" alt="home-image">
+        </button>
+    </div>
+
+    <div class="title">
+        <img src="https://cassette.sphdigital.com.sg/image/straitstimes/35a54a4aeb760d6fe17382ad29cab5cd945c782728cf54b80c0838ac9099b695?w=900" alt="pikachu in the garden">
+        <h1>Kanto region</h1>
+        <h2>Find pokémon and click on it!:]</h2>
+    </div>
+    
+    <div class="map1">
+        <img id="grassField" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/f2bdfea4-daa1-4431-be3e-c5ae6801fa3b/deiyerh-0400b131-94e1-4668-b78a-13c897ae7ac0.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi9mMmJkZmVhNC1kYWExLTQ0MzEtYmUzZS1jNWFlNjgwMWZhM2IvZGVpeWVyaC0wNDAwYjEzMS05NGUxLTQ2NjgtYjc4YS0xM2M4OTdhZTdhYzAucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.GFO50xVsLitXiWWGPbqAMiRDgZJBcihJZB1_7O4Vrqs" alt="pokefarm-img">
+        <a href="pokedex/charmander.html">
+            <img class="poke" id="charmander" src="https://www.nicepng.com/png/full/383-3832844_charmander-pc-sprite-pixel-art-pokemon-charmander.png" alt="charmander">
+        </a>
+        <a href="pokedex/bulbasaur.html">
+            <img class="poke" id="bulbasaur" src="https://www.nicepng.com/png/full/99-992152_pixel-bulbasaur-bulbasaur-pixel-art-grid.png" alt="bulbasaur">
+        </a>
+        <a href="pokedex/squirtle.html">
+            <img class="poke" id="squirtle" src="https://www.pngkey.com/png/full/772-7727768_squirtle-squirtle-pixel-art.png" alt="squirtle">
+        </a>
+        <a href="pokedex/jigglypuff.html">
+            <img class="poke" id="jigglypuff" src="https://art.pixilart.com/caa8e29b805df5f.png" alt="jigglypuff">
+        </a>
+        <a href="pokedex/snorlax.html">
+            <img class="poke" id="snorlax" src="https://www.nicepng.com/png/full/969-9693139_snorlax-snorlax-pixel-art.png" alt="snorlax">
+        </a>
+        <div class="ditto-crop">
+            <a href="pokedex/ditto.html">
+                <img class="poke" id="ditto" src="https://i.redd.it/1dmnjeo607u61.png" alt="ditto">
+            </a>
+        </div>
+        <a href="pokedex/mew.html">
+            <img class="poke" id="mew" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/8d690ca6-b325-4935-8a4f-1e997d741e21/d4lcoyj-9ee48c7b-2aab-4f10-8840-4e7689bd610a.png/v1/fill/w_841,h_763/pixel_mew_by_eri_tchi_d4lcoyj-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzYzIiwicGF0aCI6Ii9mLzhkNjkwY2E2LWIzMjUtNDkzNS04YTRmLTFlOTk3ZDc0MWUyMS9kNGxjb3lqLTllZTQ4YzdiLTJhYWItNGYxMC04ODQwLTRlNzY4OWJkNjEwYS5wbmciLCJ3aWR0aCI6Ijw9ODQxIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.AQ9W5RLs7LWed2-2l3k9g71MTRSGZR-Hnkqh8xUP9Zg" alt="mew">
+        </a>
+        <a href="pokedex/psyduck.html">
+            <img class="poke" id="psyduck" src="https://i.pinimg.com/originals/83/5b/64/835b648c438d95da3e1e4ea5999a8f95.png" alt="psyduck">
+        </a>
+        <a href="pokedex/magikarp.html">
+            <img class="poke" id="magikarp" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/bd5dfb86-cee9-431e-bbba-7aa4d1844d60/dakhjuw-cfcc2509-95f1-4fad-8899-018d1c928838.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi9iZDVkZmI4Ni1jZWU5LTQzMWUtYmJiYS03YWE0ZDE4NDRkNjAvZGFraGp1dy1jZmNjMjUwOS05NWYxLTRmYWQtODg5OS0wMThkMWM5Mjg4MzgucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.wHjtg7xJjfOeHBYF1QQtweKMby-3PR_XinjEyTjQ4pw" alt="magikarp">
+        </a>
+        <a href="pokedex/eevee.html">
+            <img class="poke" id="eevee" src="https://static.wikia.nocookie.net/pokemongo/images/5/5c/Eevee_8bits.png/revision/latest/scale-to-width-down/250?cb=20200620150512" alt="eevee">
+        </a>
+
+    </div>
+    
+
+    <script>
+        function goToHome() {
+            window.location.href = "index.html";
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>

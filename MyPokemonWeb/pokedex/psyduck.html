@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>All about my Pokémon Journey!</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <style>
+
+        body {
+            background-color: rgb(154, 187, 247);
+            font-family: sans-serif;
+        }
+        
+        .title {
+            width: 100%;
+            overflow: hidden;
+            color: white;
+        }
+
+        .title img {
+            position: fixed;
+            width: 100%;
+            margin: -45% 0 0 0;
+            z-index: -2;
+        }
+
+        h1 {
+            text-align: center;
+            text-shadow: 1px 1px grey;
+            font-size: 6vw;
+            margin-top: 5%;
+            margin-bottom: 3%;
+        }
+
+        button {
+            font-size: 15px;
+            font-family: sans-serif;
+            cursor: pointer;
+            padding: 2px;
+        }
+
+        #homeimg {
+            width: 15px;
+        }
+
+        .main {
+            text-align: center;
+            margin: 5dvw 200px 3px;
+            overflow: hidden;
+        }
+
+        .content {
+            background-color: white;
+            border-radius: 10px;
+            border: 2px solid rgb(0, 89, 255);
+            background-color: rgba(255, 255, 255, 0.85);
+        }
+
+        .content h2{
+            text-align: left;
+            font-size: 30px;
+            font-family: sans-serif;
+            color: black;
+            padding: 2px 10px 0 10px;
+            margin-top: 10px;
+            margin-bottom: 2px;
+        }
+
+        hr {
+            margin: 0 10px 10px;
+            text-align: center;
+            color: rgba(0, 0, 0, 0.885);
+        }
+
+        #left-bgcolour {
+            background-color: rgb(203, 179, 59);
+        }
+
+        @media only screen and (max-width: 1050px) {
+            .main {margin: 5dvw 10px 3px;}
+            .content {width: 100%}
+            #size2adjust {padding: 0.5px}
+            #right-content {width: 50vw}
+        }
+
+        @media only screen and (max-width: 574px) {
+            .main {margin: 5dvw 10px 3px;}
+            .content {width: 100%}
+            #size2adjust {padding: 0.5px}
+            #right-content {width: 85vw}
+            #left-content {width: 85vw}
+        }
+
+        @media only screen and (min-width: 1100px) {
+            #left-content {width: 300px}
+        }
+    </style>
+</head>
+<body>
+
+    <div id="homebutton-loc">
+        <button onclick=goToHome()>Back to Home
+            <span><img id="homeimg" src="https://cdn-icons-png.flaticon.com/512/25/25694.png" alt="home-image">
+        </button>
+        <button onclick=goToPokeFarm()>Go to PokéFarm</button>
+    </div>
+
+    <div class="title">
+        <img src="https://cassette.sphdigital.com.sg/image/straitstimes/35a54a4aeb760d6fe17382ad29cab5cd945c782728cf54b80c0838ac9099b695?w=900" alt="pikachu in the garden">
+    </div>
+
+    <div class="main">
+        <div class="content">
+            <h2>Psyduck</h2>
+            <hr>
+            <div class="container-fluid m-4">
+                <div class="row">
+                    <div class="col-sm-5 rounded border border-dark" id="left-content">
+                        <div class="container rounded mt-2">
+                            <div class="row rounded-3 p-2" id="left-bgcolour">
+                                <div class="col-sm-8 text-bg-light rounded-3 mx-1"><strong>Psyduck</strong></div>
+                                <div class="col-sm-3 text-bg-light rounded-3 mx-1" id="size2adjust"><strong>#0054</strong></div>
+                            </div>
+                            <div class="row rounded-3">
+                                <div class="col text-bg-light rounded-3 mx-1 mb-1"><img src="https://archives.bulbagarden.net/media/upload/thumb/3/3f/0054Psyduck.png/1024px-0054Psyduck.png" alt="psyduck" style="width: 100%; margin: 5px 5px 5px 5px;"></div>
+                            </div>
+                        </div>
+                        <div class="container rounded mt-3 p-1" id="left-bgcolour">
+                            <div class="row rounded-3">
+                                <div class="col">Type</div>
+                            </div>
+                            <div class="row justify-content-center">
+                                <div class="col-5 align-self-center text-bg-light rounded-3 mx-1">Water</div>
+                            </div>
+                        </div>
+                        <div class="container rounded mt-3 p-1">
+                            <canvas id="radarChart"></canvas> 
+                        </div>
+                    </div>
+                    <div class="col-sm-7 rounded-3 text-start" id="right-content">
+                        Psyduck is a yellow Pokémon resembling a duck or a bipedal platypus. On top of its head are three thick strands of black hair, and it has a wide, flat cream-colored beak. Psyduck's eyes seem vacant and have tiny pupils. Its legs and tail are stubby, and it has cream-colored webbed feet. There are three claws on each of its hands.
+                        <br><br>
+                        Psyduck is constantly stunned by its headache and is unable to think very clearly. It usually stands immobile, trying to calm its headache. However, when its headache becomes too severe, Psyduck releases tension in the form of strong psychic powers. The use of these powers produces brain waves identical to those seen in sleepers, and the Pokémon is unable to recall these episodes. Psyduck lives in freshwater lakes and small ponds, but can be seen in rivers in tropical areas as shown in Pokémon Snap. As mentioned in Pokémon Sleep, Psyduck suffers headaches while it sleeps. Very rarely, their sights are Psyduck sleeping peacefully while not holding its head.
+                    </div>
+                </div>
+        </div>
+    </div>
+    <script>
+        function goToHome() {
+            window.location.href = "../index.html";
+        }
+
+        function goToPokeFarm() {
+            window.location.href = "../pokeFarm.html";
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const pokemonStats= {
+            labels: ['HP','Attack','Defense','Sp.Atk','Sp.Def','Speed'],
+            datasets: [{
+                label: 'Values',
+                data: [50, 52, 48, 65, 50, 55],
+                fill: true,
+                borderWidth: 2,
+                backgroundColor: 'rgba(203, 179, 59, 0.2)',
+                borderColor: 'rgb(203, 179, 59)',
+                pointBackgroundColor: 'orange',
+                pointHoverBackgroundColor: '#fff',
+            }]
+        };
+        const ctx = document.getElementById('radarChart');
+        new Chart(ctx, {
+            type: 'radar',
+            data: pokemonStats,
+            options: {
+                responsive: true,
+                scales: {
+                    r: {
+                        angleLines: { color: 'white' },
+                        grid: { color: '#555' },
+                        max: 252,
+                    }
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>
